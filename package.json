@@ -1,0 +1,9 @@
+{
+    "name": "anvil.scaffold.ckeditor",
+    "version": "0.0.1",
+    "description": "CKEditor plugin scaffolding for Anvil",
+    "main": "lib/ckeditor.scaffold.js",
+    "requiredPlugins": [
+        "anvil.scaffold"
+    ]
+}
