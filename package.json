@@ -1,9 +1,25 @@
 {
-    "name": "anvil.scaffold.ckeditor",
-    "version": "0.0.2",
-    "description": "CKEditor plugin scaffolding for Anvil",
-    "main": "lib/ckeditor.scaffold.js",
-    "requiredPlugins": [
-        "anvil.scaffold"
-    ]
+  "name": "anvil.scaffold.ckeditor",
+  "version": "0.0.3",
+  "description": "Scaffold for CKEditor plugins",
+  "main": "./lib/ckeditor.scaffold.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tysoncadenhead/anvil.scaffold.ckeditor.git"
+  },
+  "keywords": [
+    "anvil",
+    "ckeditor",
+    "scaffold"
+  ],
+  "dependencies": {
+    "anvil.js": ">=0.9.0-RC4"
+  },
+  "requiredPlugins": [
+      "anvil.scaffold"
+  ],
+  "author": "Tyson Cadenhead",
+  "license": "MIT"
 }

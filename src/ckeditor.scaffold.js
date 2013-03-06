@@ -7,7 +7,7 @@ module.exports = function (_, anvil) {
 
     'use strict';
 
-    return anvil.plugin({
+    anvil.plugin({
 
         type: 'ckeditor',
         description: 'Creates a new CKEditor plugin',

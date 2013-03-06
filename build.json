@@ -1,1 +1,5 @@
-{}
+{
+    "anvil.uglify": {
+        "all": "true"
+    }
+}
