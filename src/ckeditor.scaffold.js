@@ -22,16 +22,20 @@ module.exports = function (_, anvil) {
             required: true
         }],
 
+        data: {
+            src: anvil.config.source,
+            spec: anvil.config.spec
+        },
+
         output: {
-            'src/{{path}}/plugins/{{name}}': {
+            '{{src}}/{{path}}/plugins/{{name}}': {
                 'plugin.html': anvil.scaffold.file(root + '/plugin.html'),
                 'plugin.js': anvil.scaffold.file(root + '/plugin.js'),
                 'images': {
-                    'empty': anvil.scaffold.file(root + '/empty'),
-                    'icon.png': root + '/icon.png'
+                    'icon.png': anvil.scaffold.file(root + '/empty')
                 }
             },
-            'spec': {
+            '{{spec}}': {
                 'ckeditor.{{name}}.spec.js': anvil.scaffold.file(root + '/spec.js')
             }
         }
