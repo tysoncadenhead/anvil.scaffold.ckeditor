@@ -28,7 +28,7 @@ module.exports = function (_, anvil) {
                 'plugin.js': anvil.scaffold.file(root + '/plugin.js'),
                 'images': {
                     'empty': anvil.scaffold.file(root + '/empty'),
-                    'icon.png': anvil.scaffold.file(root + '/icon.png')
+                    'icon.png': root + '/icon.png'
                 }
             },
             'spec': {
