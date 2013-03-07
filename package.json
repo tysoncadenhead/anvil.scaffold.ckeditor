@@ -17,9 +17,6 @@
   "dependencies": {
     "anvil.js": ">=0.9.0-RC4"
   },
-  "requiredPlugins": [
-      "anvil.scaffold"
-  ],
   "author": "Tyson Cadenhead",
   "license": "MIT"
 }
