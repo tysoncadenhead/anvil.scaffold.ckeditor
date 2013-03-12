@@ -1,60 +1,39 @@
-/*global describe, it */
+/*global describe, it, before, after, expect */
 /*jslint node: true */
 
-// Mocha test for {{name}}
+// Mocha test for pagination
 (function () {
 
     'use strict';
 
-    global.CKEDITOR = {
-        plugins: {
-            add: function () {}
-        }
-    };
-
-    var assert = require('assert'),
-        plugin = require('../src/{{path}}/plugins/{{name}}/plugin');
-
-    describe('Test suite for the {{name}} CKEditor plugin', function () {
-
-        describe('init()', function () {
-
-            it('Should return undefined', function () {
-                assert.equal(plugin.init({
-                    addCommand: function () {},
-                    ui: {
-                        addButton: function () {}
-                    }
-                }), undefined);
-            });
-
+    var test = require('../spec/test')({
+            functional: false,
+            file: '../src/{{path}}/plugins/{{name}}/index.html'
         });
 
-        describe('on()', function () {
+    describe('{{path}}/plugins/{{name}}/plugin.js', function() {
 
-            it('Should remove the cke_button_off class', function () {
-                plugin.$button = {
-                    removeClass: function (cls) {
-                        assert.equal(cls, 'cke_button_off');
-                    }
-                };
-                plugin.on();
+        before(test.before);
+     
+        describe('init()', function(){
+            it('Should initialize the plugin', function () {
+
             });
-
         });
 
-        describe('off()', function () {
-
-            it('Should add the cke_button_off class', function () {
-                plugin.$button = {
-                    addClass: function (cls) {
-                        assert.equal(cls, 'cke_button_off');
-                    }
-                };
-                plugin.off();
+        describe('on()', function(){
+            it('Should turn the plugin on', function(done) {
+                done();
             });
-
         });
+
+        describe('off()', function(){
+            it('Should turn the plugin off', function(done) {
+                done();
+            });
+        });
+     
+        after(test.after);
 
     });
 
