@@ -19,16 +19,19 @@ module.exports = function (obj) {
     }
 
     global = _.extend(global, {
+        webclient: require('webdriverjs'),
         client: client,
         expect: chai.expect
     });
 
     return _.extend(chai, {
 
+        file: obj.file,
+
         before: function (done) {
             this.timeout(500000);
             if (obj.functional) {
-                client.init().url('http://localhost:' + build.port + '/' + obj.file, done);
+                client.init().url('http://localhost:' + build.port + '/' + this.file, done);
             } else {
                 done();
             }
