@@ -1,27 +1,27 @@
-/*jslint node: true, plusplus: true */
-/*global it, describe, before, beforeEach, client, webclient, expect, after */
+/*global describe, it, beforeEach, after, webdriver, assert, module, $, paginationPlugin */
+/*jslint plusplus: true */
 
-(function () {
+module.exports = function (driver, callback) {
 
     'use strict';
 
-    var test = require('../spec/test')({
-            functional: false,
-            file: '../src/{{path}}/plugins/{{name}}/index.html'
-        });
-
     describe('{{path}}/plugins/{{name}}/plugin.js', function() {
 
-        before(test.before);
-     
-        describe('init()', function(){
+        after(function (done) {
+            callback();
+            done();
+        });
+
+        driver.get('http://localhost:9876/{{path}}/plugins/{{name}}/index.html');
+
+        describe('init()', function () {
+
             it('Should initialize the test', function () {
 
             });
+
         });
-        
-        after(test.after);
 
     });
 
-}());
+};
